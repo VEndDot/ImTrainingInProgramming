@@ -5,7 +5,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace TaskSolution
 {
     /// <summary>
-    /// Решение задач
+    /// Решение задач. Все эти задачки чисто дурачество. Пытаюсь получше понять синтаксис C#.
+    /// На данный момент, самая прикольная TextBasedBattleSimulator(); без ООП, функций и вообще все в одном цикле
     /// </summary>
     internal class Program
     {
@@ -32,7 +33,39 @@ namespace TaskSolution
             //TextBasedBattleSimulator();
             //MicrosoftLearnCodeProject_1();
             //MicrosoftLearnCodeProject_2();
+            //MicrosoftLearnCodeProject_3();
             
+        }
+        /// <summary>
+        /// код, который обрабатывает содержимое массива строк/ Делал просто по условию. Я бы по другому сделал
+        /// Да и такие задачки не очень. За бабки да.
+        /// </summary>
+        public static void MicrosoftLearnCodeProject_3()
+        {
+            string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+            int periodLocation;
+
+            foreach (string myString in myStrings)
+            {
+                string newStr = myString;
+
+                while (true)
+                {
+                    periodLocation = newStr.IndexOf(".");
+
+                    if (periodLocation == -1)
+                    {
+                        Console.WriteLine(newStr.TrimStart());
+                        break;
+                    }
+
+                    Console.WriteLine(newStr.Substring(0, periodLocation).TrimStart());
+
+                    newStr = newStr.Remove(0, periodLocation + 1);
+                    Thread.Sleep(1000);
+                }
+            }
+
         }
 
         /// <summary>
@@ -530,7 +563,7 @@ namespace TaskSolution
             */
         }
 
-        // Китайский зодиак
+        /// Китайский зодиак
         public static void TheChineseZodiac()
         {
             string[] chineseZodiac = {
