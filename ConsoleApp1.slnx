@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
+  <Project Path="QwenTaskSolution/QwenTaskSolution.csproj" Id="79e2762b-ec7b-4b0a-94ba-e9e761d505c5" />
+  <Project Path="TaskSolution/TaskSolution.csproj" Id="ac9a0f1a-09ce-4c78-8440-10139f05f5dc" />
+</Solution>
